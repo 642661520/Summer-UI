@@ -55,7 +55,6 @@ import sui from './modules/sui'
 ```
 ##### 为视口添加自定义滑动条
 ```
-
 sui.suiscrollbarbody.open({background:undefined})
 ````
 ##### 为指定元素添加自定义滑动条
