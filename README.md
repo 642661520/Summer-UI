@@ -6,7 +6,12 @@
 #### 1.1 功能
 最大化、最小化、4角拉伸、点击置顶
 #### 1.2 使用
-```import sui from './modules/sui'
+引入
+```
+import sui from './modules/sui'
+```
+创建新窗口
+```
 sui.suibox.open({content: element}) 
 ```
 content为必传参数：jq对象，dom对象，class，id，文本
@@ -43,9 +48,13 @@ restore = function () {}
 #### 2.1 功能
 自定义滑动条，窗口或指定元素
 #### 2.2 使用
-
+引入
+```
+import sui from './modules/sui'
+```
 为视口添加自定义滑动条
 ```
+
 sui.suiscrollbarbody.open({background:undefined})
 ````
 为指定元素添加自定义滑动条
