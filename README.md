@@ -11,6 +11,7 @@ sui.suibox.open({content: element})
 ```
 content为必传参数：jq对象，dom对象，class，id，文本
 可传参数：
+```
 type :窗口类型（0：消息框，1：普通窗口）,
 title ：标题栏（false，文本）
 move ：可移动区域默认为标题栏'.sui-suibox-title',
@@ -36,14 +37,20 @@ resizeEnd = function () {},
 full = function () {},
 min = function () {},
 restore = function () {}
+```
 ### 2.自定义滑动条
 ![Image text](./img/scrollbar.PNG)
 #### 2.1 功能
 自定义滑动条，窗口或指定元素
 #### 2.2 使用
+
 为视口添加自定义滑动条
+```
 sui.suiscrollbarbody.open({background:undefined})
+````
 为指定元素添加自定义滑动条
+```
 sui.suiscrollbar.open({
   content: '.testscroll',
 });
+```
