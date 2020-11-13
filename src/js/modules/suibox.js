@@ -1210,7 +1210,7 @@ const suibox = {
 					left = x - a - marginleft
 					top = y - b - margintop
 
-					//#endregion 吸附
+					//#region  吸附
 					for (let i = 0; i < $('div[id^=sui-suibox]').length; i++) {
 						if ($('div[id^=sui-suibox]')[i] == box[0]) {
 							i++
@@ -1618,6 +1618,7 @@ const suibox = {
 			if (transitions) {
 				return
 			}
+			
 			$('#sui-suibox' + boxindex).css({
 				transition: ''
 			})
@@ -1689,8 +1690,8 @@ const suibox = {
 					display: 'none'
 				})
 				$('#sui-suibox' + boxindex).css({
-					width: "100%",
-					height: "100%",
+					width: window.innerWidth,
+					height: window.innerHeight,
 					top: scrollTop,
 					left: scrollLeft,
 					'margin-left': 0,
@@ -1761,14 +1762,11 @@ const suibox = {
 
 		//禁止滚动条滚动
 		function unScroll() {
-			var top = $(document).scrollTop();
-			$(document).on('scroll.unable', function (e) {
-				$(document).scrollTop(top);
-			})
+			document.body.parentNode.style.overflow ="hidden"//隐藏且禁用横向纵向两个滚动条
 		}
 		//移除禁止滚动条滚动
 		function removeUnScroll() {
-			$(document).off("scroll.unable");
+			document.body.parentNode.style.overflow = "auto";//开启横向纵向两个滚动条
 		}
 
 
